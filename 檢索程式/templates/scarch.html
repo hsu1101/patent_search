@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <form action="/select" method="post">
+        <h1>Result</h1>
+        <table border="1">
+  <tr>
+      <th>PublicationNumber</th>
+      <th>Assignee_Applicant</th>
+      <th>Title</th>
+      <th>PublicationDate</th>
+      <th>ApplicationDate</th>
+      <th>PriorityDate</th>
+      <th>Inventor</th>
+</tr>
+
+      {% for i in items %}
+            <tr>
+                <td> {{ i.PublicationNumber}}</td>
+                <td> {{ i.Assignee_Applicant}}</td>
+                <td> {{ i.Title}}</td>
+		<td> {{ i.PublicationDate}}</td>
+		<td> {{ i.ApplicationDate}}</td>
+		<td> {{ i.PriorityDate}}</td>
+		<td> {{ i.Inventor}}</td>
+
+
+  </tr>
+      {% endfor %}
+
+</table>
+
+
+
+
+
+
+
+
+        </form>
+
+</body>
+</html>
